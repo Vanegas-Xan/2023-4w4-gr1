@@ -1,0 +1,23 @@
+/*
+Theme Name: 4w4_xander
+Theme URI: https://github.com/Vanegas-Xan
+Author: the WordPress team
+Author URI: https://referenced.ca/
+Description: Développement d'un thème de base dans le cadre du cours 4w4
+Version: 1.3
+Requires at least: 5.0
+Tested up to: 6.1
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  4w4_xander
+*/
+
+body{
+    background-color: antiquewhite;
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
