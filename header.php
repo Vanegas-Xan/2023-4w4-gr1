@@ -7,10 +7,13 @@
     <title>Document</title>
 </head>
 <?php wp_head(); ?>
+<a href="<?= bloginfo('url') ?>"><h3><h1><?= bloginfo('name') ?></h1></a>
+<h2><?= bloginfo('description') ?></h2>
+
 <body>
     <main>
     <h1>4W4-Création d'interface et développement <?php ?></h1>
-
+    
     </main>
     <header >
     </header>
