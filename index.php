@@ -10,10 +10,10 @@
 <?php if (have_posts()): // Deux point valable, si endif et mit en place
         while(have_posts()): //Vérifie si il y'a un post qui a été mit, parcoure l'ensemble des posts avec while
         the_post(); // extrait un objet «post»?>
- <article> 
-        <h3><?php the_title();// affiche le titre du post?></h3>
-        <h6> Extrait: </h6><?php get_the_excerpt(); //Affiche les extraits des articles ?>
-        <h6>Le contenu:</h6> <?php the_content(); // Affiche le contenu des articles ?>
+ <article class="contenu__article"> 
+        <h3 class="contenu__titre"><?php the_title();// affiche le titre du post?></h3>
+        <h6 class="contenu__extrait"> Extrait: </h6><?php get_the_excerpt(); //Affiche les extraits des articles ?>
+        <h6 class="contenu__description">Le contenu:</h6> <?php the_content(); // Affiche le contenu des articles ?>
       </article>
        
    <?php endwhile; ?>
