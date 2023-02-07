@@ -21,6 +21,12 @@
                       }
                       add_action( 'after_setup_theme', 'enregistre_menu', 0 );
                     }
+
+                    add_theme_support( 'title-tag' );
+                    add_theme_support( 'custom-logo', array(
+                      'height' => 1500,
+                      'width'  => 1500,
+                  ) );
  // git add --all
  // git status
  // git commit -m "s1c2"
