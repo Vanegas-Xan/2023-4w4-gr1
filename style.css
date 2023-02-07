@@ -398,8 +398,17 @@ a:hover {
   transform: scaleZ();
 }
 
+.menu__entete .menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+.menu__entete .menu .menu-item a {
+  padding: 3px 5px;
+}
+
 /* --------------------------------------------- layout */
-.entete {
+.site__entete {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
 }

@@ -10,6 +10,17 @@
                     add_action( 'wp_enqueue_scripts', 'enfiler_css' );
                     //ajout de add_action pour enfiler style.css dans function functions.php
 
+
+                    if ( ! function_exists( 'enregistre_menu' ) ) {
+
+                      function enregistre_menu(){
+                           register_nav_menus( array(
+                            'menu_entete' =>  'Menu entete', 
+                            'menu_sidebar' => ' Menu sidebar', 
+                        ) );
+                      }
+                      add_action( 'after_setup_theme', 'enregistre_menu', 0 );
+                    }
  // git add --all
  // git status
  // git commit -m "s1c2"
