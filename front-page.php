@@ -11,7 +11,7 @@
 <?php if(have_posts()): ?>
         <?php while(have_posts()): the_post(); ?>
         <article class= "contenu__article">
-               <a href="<?php the_permalink(); ?>"> <h3><?php the_title(); ?></h3>
+               <a href="<?php the_permalink(); ?>"> <h3 class="contenu__article__titre"><?php the_title(); ?></h3>
                 <h6>Extrait:</h6> <?php the_excerpt(); //Affiche les extraits des articles ?>
                 <h6>Le contenu:</h6> <?php the_content(); // Affiche le contenu des articles ?>
         </article>

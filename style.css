@@ -419,6 +419,8 @@ a:hover {
 }
 
 body {
+  width: auto;
+  height: auto;
   background: rgb(131, 58, 180);
   background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
 }
