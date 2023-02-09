@@ -1,6 +1,14 @@
 .site__entete {
-    display: grid;
+   grid-area: header;
     grid-template-columns: 1fr 1fr 2fr
+}
+
+.menu__entete{
+    grid-area: nav;
+}
+
+.pied__page{
+    grid-area: footer;
 }
 
 
@@ -23,4 +31,13 @@ body{
     height: auto;
     background: rgb(131,58,180);
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  }
+
+  .site{
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    "header"
+    "nav"
+    "footer";
   }

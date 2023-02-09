@@ -34,8 +34,10 @@ a:hover{
    justify-content: flex-end;
 
     .menu-item { //li
-          
-
+        background-color: crimson;
+          border-radius: 15px ;
+          color: greenyellow;
+          align-self: center;
         a{
              padding: 3px 5px;
         }

@@ -403,14 +403,28 @@ a:hover {
   list-style-type: none;
   justify-content: flex-end;
 }
+.menu__entete .menu .menu-item {
+  background-color: crimson;
+  border-radius: 15px;
+  color: greenyellow;
+  align-self: center;
+}
 .menu__entete .menu .menu-item a {
   padding: 3px 5px;
 }
 
 /* --------------------------------------------- layout */
 .site__entete {
-  display: grid;
+  grid-area: header;
   grid-template-columns: 1fr 1fr 2fr;
+}
+
+.menu__entete {
+  grid-area: nav;
+}
+
+.pied__page {
+  grid-area: footer;
 }
 
 .contenu__article {
@@ -432,6 +446,12 @@ body {
   height: auto;
   background: rgb(131, 58, 180);
   background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+}
+
+.site {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "header" "nav" "footer";
 }
 
 .site {
