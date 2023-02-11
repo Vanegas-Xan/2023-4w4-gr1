@@ -13,6 +13,7 @@
 
 
 .contenu__article{
+    grid-area: content;
     display: flex;
     background: content-box;
 }
@@ -33,11 +34,21 @@ body{
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
   }
 
+  .site__logo{
+    position: relative;
+    bottom:  22em;
+    right : 1em;
+  }
+
   .site{
+    max-width: 500em;
     display: grid;
     gap: 20px;
     grid-template-areas:
     "header"
     "nav"
+    "content"
     "footer";
   }
+  
+ 

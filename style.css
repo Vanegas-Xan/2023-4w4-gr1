@@ -381,6 +381,8 @@ p {
 .site__titre h1 {
   font-size: clamp(1rem, 0.3864rem + 2.4545vw, 4.375rem);
   transition: 0.3s;
+  justify-content: end;
+  gap: 20px;
 }
 
 a {
@@ -396,6 +398,12 @@ a {
 a:hover {
   color: white;
   transform: scaleZ();
+}
+
+.site__entete {
+  background-color: #aaf78c;
+  width: auto;
+  height: 20em;
 }
 
 .menu__entete .menu {
@@ -428,6 +436,7 @@ a:hover {
 }
 
 .contenu__article {
+  grid-area: content;
   display: flex;
   background: content-box;
 }
@@ -448,10 +457,17 @@ body {
   background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
 }
 
+.site__logo {
+  position: relative;
+  bottom: 22em;
+  right: 1em;
+}
+
 .site {
+  max-width: 500em;
   display: grid;
   gap: 20px;
-  grid-template-areas: "header" "nav" "footer";
+  grid-template-areas: "header" "nav" "content" "footer";
 }
 
 .site {

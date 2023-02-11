@@ -13,7 +13,7 @@
 <header class="site__entete">
 <a class = "site__titre" href="<?= bloginfo('url') ?>"><h3><h1><?= bloginfo('name') ?></h1></a>
 <h2 class="site__description"><?= bloginfo('description') ?></h2>
-<?php the_custom_logo(); ?>
+<div class="site__logo"><?php the_custom_logo(); ?></div>
 <?php wp_nav_menu(array (
                          "menu" =>  "entete",
                          "container" =>  "nav",
