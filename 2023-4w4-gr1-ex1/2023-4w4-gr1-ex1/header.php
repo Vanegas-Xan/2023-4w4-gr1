@@ -11,7 +11,6 @@
 <body <?php body_class("site");?>>
 
 <header class="site__entete">
-    <section class="entete__nav">
 <a class = "site__titre" href="<?= bloginfo('url') ?>"><h3><h1><?= bloginfo('name') ?></h1></a>
 <h2 class="site__description"><?= bloginfo('description') ?></h2>
 <div class="site__logo"><?php the_custom_logo(); ?></div>
@@ -21,7 +20,6 @@
                          "container_class" =>  "menu__entete"
 
 )); ?>
-</section>
 </header >
  
 
