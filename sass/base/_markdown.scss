@@ -9,7 +9,11 @@ ol li {
 li > ol {}
 li > ul {}
 
-pre {}
+pre {
+    background-color: #555;
+    color: aqua;
+    overflow-x: scroll;
+}
 code {}
 
 strong{}
