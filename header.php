@@ -21,6 +21,7 @@
                          "container_class" =>  "menu__entete"
 
 )); ?>
+<?= get_search_form(); ?>
 </section>
 </header >
  

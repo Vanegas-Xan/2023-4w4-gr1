@@ -27,6 +27,24 @@
                       'height' => 1500,
                       'width'  => 1500,
                   ) );
+                  /**
+ * Modifie la requete principale de Wordpress avant qu'elle soit exécuté
+ * le hook « pre_get_posts » se manifeste juste avant d'exécuter la requête principal
+ * Dépendant de la condition initiale on peut filtrer un type particulier de requête
+ * Dans ce cas çi nous filtrons la requête de la page d'accueil
+ * @param WP_query  $query la requête principal de WP
+ */
+function cidweb_modifie_requete_principal( $query ) {
+  if (    $query->is_home()  //  si page d'accueill
+          && $query->is_main_query() // si requête principale
+          && ! is_admin() ) { // si on est pas dans le tableau de bord
+          // $query->set permet de modifier la requête principale
+    $query->set( 'category_name', '4w4' ); //filtre les articles de categorie note4w4
+    $query->set( 'orderby', 'title' ); // trier selon le champs "title"
+    $query->set( 'order', 'ASC' ); // Trier en ordre ascendant
+    }
+   }
+   add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );
  // git add --all
  // git status
  // git commit -m "s1c2"

@@ -373,6 +373,39 @@ p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+ul,
+ol {
+  margin: 1rem 0rem;
+  padding: 0;
+  color: #555;
+}
+@media screen and (min-width: 400px) {
+  ul,
+ol {
+    margin: 1rem 2rem;
+    padding: 9px;
+  }
+}
+@media screen and (min-width: 700px) {
+  ul,
+ol {
+    margin: 1rem 1rem;
+    padding: 3px;
+  }
+}
+
+ul {
+  list-style-type: circle;
+}
+
+li li::before {
+  content: "-";
+  background: lightgray;
+}
+
+/*li > ol {}
+li > ul {}
+*/
 pre {
   background-color: #555;
   color: aqua;
@@ -441,6 +474,13 @@ a:hover {
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   background-color: black;
   color: rgb(231, 233, 84);
+}
+.menu__entete .menu .menu-item .menu-item::before {
+  content: "";
+  background: transparent;
+  border-radius: 0rem;
+  padding-inline: 0rem;
+  margin-inline-end: 0rem;
 }
 .menu__entete .menu .menu-item a {
   color: inherit;
