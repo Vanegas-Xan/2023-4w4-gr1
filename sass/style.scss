@@ -17,7 +17,6 @@ Text Domain:  4w4_xander
 
 
 @import "variable/dimension";
-
 // @import "variable/variable";
 
 /* --------------------------------------------- base */
@@ -30,12 +29,10 @@ Text Domain:  4w4_xander
 @import "composant/footer";
 @import "composant/blockflex";
 
-
 /* --------------------------------------------- layout */
 @import "layout/layout";
+@import "layout/aside-contenu";
 @import "layout/content-sidebar";
-
 @import "layout/no-sidebar";
-
 @import "layout/sidebar_content";
 

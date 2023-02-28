@@ -24,9 +24,26 @@
 <?= get_search_form(); ?>
 </section>
 </header >
+
+<aside class="site__aside">
+    <h3>Menu secondaire</h3>
+    <?php 
+        $category = get_queried_object();
+        if (isset($category)){
+             $menu = $category->slug;
+        }
+        else {
+            $menu = "4w4";
+        }
+       
+        echo $menu;
+        wp_nav_menu(array (             
+        "menu" =>  $menu,                    
+        "container" =>  "nav"                   
+
+)); ?>
+</aside>
  
-
-
     <main class="principal">
     <h1>4W4-Création d'interface et développement <?php ?></h1>
     

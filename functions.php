@@ -45,6 +45,7 @@ function cidweb_modifie_requete_principal( $query ) {
     }
    }
    add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );
+
  // git add --all
  // git status
  // git commit -m "s1c2"
