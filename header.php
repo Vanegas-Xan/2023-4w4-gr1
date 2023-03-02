@@ -28,6 +28,7 @@
 <aside class="site__aside">
     <h3>Menu secondaire</h3>
     <?php 
+         
         $category = get_queried_object();
         if (isset($category)){
              $menu = $category->slug;
@@ -35,7 +36,11 @@
         else {
             $menu = "4w4";
         }
-       
+
+        if(substr($menu,0,1) == '0'){
+            $menu = substr($menu, 1);
+         }
+   
         echo $menu;
         wp_nav_menu(array (             
         "menu" =>  $menu,                    

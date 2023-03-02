@@ -494,7 +494,8 @@ a:hover {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.block__flex article {
+
+.blocflex__article {
   flex: 1 0 250px;
   padding: 10px;
   margin: 10px;
@@ -502,6 +503,10 @@ a:hover {
   background-color: mediumturquoise;
   backdrop-filter: blur(5px);
   box-shadow: 0 5px 10px rgb(0, 0, 0);
+}
+
+.blocflex__galerie {
+  flex: 1 0 100%;
 }
 
 /* --------------------------------------------- layout */

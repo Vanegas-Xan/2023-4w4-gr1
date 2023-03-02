@@ -34,6 +34,12 @@
  * Dans ce cas çi nous filtrons la requête de la page d'accueil
  * @param WP_query  $query la requête principal de WP
  */
+
+function google_fonts(){
+  wp_enqueue_style('google_fonts', 'https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap', false);
+  add_action('wp_enqueue_scripts', 'google_fonts');
+ }
+
 function cidweb_modifie_requete_principal( $query ) {
   if (    $query->is_home()  //  si page d'accueill
           && $query->is_main_query() // si requête principale
@@ -46,6 +52,8 @@ function cidweb_modifie_requete_principal( $query ) {
    }
    add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );
 
+
+   
  // git add --all
  // git status
  // git commit -m "s1c2"

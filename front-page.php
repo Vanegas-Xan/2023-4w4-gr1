@@ -12,15 +12,15 @@
 
           <?php if(have_posts()): ?>
            <?php while(have_posts()): the_post(); ?>
+         <?php if (in_category('galerie')){
+             get_template_part("template-parts/categorie", "galerie"); 
+         } else{
+           get_template_part("template-parts/categorie", "4w4"); 
+         }
          
-             <article class= "contenu__article">
-               <a href="<?php the_permalink(); ?>"> <h3 class="contenu__article__titre"><?php the_title();$title=get_the_excerpt(); ?></h3>
-               <?php echo substr($title,5,0);?>
-              <?php // get_the_excerpt(); //Affiche les extraits des articles ?>
-              <hr>
-              <?= wp_trim_words(get_the_excerpt(), 10, "...");?>
-              
-            </article>
+         ?>
+       
+       
         <hr>
            <?php endwhile ?>
         <?php endif ?>
