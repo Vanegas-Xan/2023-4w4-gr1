@@ -19,28 +19,24 @@ if (is_front_page()){
 
 <header class="site__entete">
     <section class="entete__nav">
-<a class = "site__titre" href="<?= bloginfo('url') ?>"><h3><h1><?= bloginfo('name') ?></h1></a>
-<h2 class="site__description"><?= bloginfo('description') ?></h2>
+
 <div class="site__logo"><?php the_custom_logo(); ?></div>
+<?= get_search_form(); ?>
 <?php wp_nav_menu(array (
                          "menu" =>  "entete",
                          "container" =>  "nav",
                          "container_class" =>  "menu__entete"
 
 )); ?>
-<?= get_search_form(); ?>
+
 </section>
+<a class = "site__titre" href="<?= bloginfo('url') ?>"><h3><h1><?= bloginfo('name') ?></h1></a>
+<h2 class="site__description"><?= bloginfo('description') ?></h2>
 </header >
 
 <?php 
 if(! is_front_page()) 
     get_template_part("template-parts/aside");
     ?>
- 
-    <main class="principal">
-    <h1>4W4-Création d'interface et développement <?php ?></h1>
-    
-    </main>
-    
 
 </html>

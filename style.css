@@ -447,16 +447,10 @@ a:hover {
   transform: scaleZ();
 }
 
-.site__entete {
-  background-color: #aaf78c;
-  width: auto;
-}
-
 .menu__entete .menu {
   display: flex;
   list-style-type: none;
   justify-content: space-between;
-  margin-bottom: 30em;
   gap: 20px;
   flex-wrap: wrap;
   align-content: end;

@@ -32,15 +32,6 @@ a:hover{
     transform: scaleZ(); 
 }
   
-
-
-
-.site__entete{
-
- background-color: adjust-hue($color: #aaf78c, $degrees: 0);
- width: auto;
- 
-}
 // menu__entete
 .menu__entete{ // nav 
 
@@ -48,7 +39,6 @@ a:hover{
    display: flex;
    list-style-type: none ;
    justify-content: space-between;
-   margin-bottom: 30em;
    gap: 20px;
     flex-wrap: wrap;
     align-content: end;

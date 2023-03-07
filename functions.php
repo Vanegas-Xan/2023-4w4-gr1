@@ -30,8 +30,8 @@
 
                     add_theme_support( 'title-tag' );
                     add_theme_support( 'custom-logo', array(
-                      'height' => 1500,
-                      'width'  => 1500,
+                      'height' => 50,
+                      'width'  => 50,
                   ) );
                   /**
  * Modifie la requete principale de Wordpress avant qu'elle soit exécuté
