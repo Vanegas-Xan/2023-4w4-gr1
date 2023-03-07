@@ -1,33 +1,22 @@
 <?php 
 /**
- * Modèle par défaut du thème 4w4 gr1
+ * index.php est le modèle par défaut du thème 4w4 
  */
 ?>
- <?php get_header(); ?>
- <main class="site__main">
-   <h1> Bienvenue au de cours de 4w4</h1>
-   <pre>front-page.php</pre>
-    <section class="block__flex">
-       
 
-          <?php if(have_posts()): ?>
-           <?php while(have_posts()): the_post(); ?>
-         <?php if (in_category('galerie')){
-             get_template_part("template-parts/categorie", "galerie"); 
-         } else{
-           get_template_part("template-parts/categorie", "4w4"); 
-         }
-         
-         ?>
-       
-       
-        <hr>
-           <?php endwhile ?>
-        <?php endif ?>
-    </section>
-
-</main>
-
-<?php
-        get_footer();
-?>
+<?php get_header(); ?>
+    <main class="site__main">
+        <pre>front-page.php</pre>
+        <h1>Bienvenue sur 4W4</h1>
+        <section class="blocflex">
+            <?php if(have_posts()):
+                while (have_posts()): the_post(); 
+                    $la_categorie = '4w4';
+                    if (in_category('galerie')){
+                        $la_categorie = 'galerie';}
+                    get_template_part("template-parts/categorie",$la_categorie);
+               endwhile; 
+             endif; ?>
+        </section>
+    </main>
+<?php get_footer(); ?>

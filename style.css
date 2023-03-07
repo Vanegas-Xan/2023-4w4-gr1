@@ -506,7 +506,7 @@ a:hover {
 }
 @media screen and (min-width: 400px) {
   .blocflex__article {
-    flex: 1 0 220px;
+    flex: 1 0 150px;
   }
 }
 
@@ -528,6 +528,7 @@ a:hover {
   width: 18%;
   border-radius: 15%;
   justify-content: space-evenly;
+  font-family: "Bree+erif";
 }
 
 body {
@@ -576,6 +577,16 @@ body {
   .site {
     grid-template-columns: 20% auto;
     grid-template-areas: "header header" "aside main" "footer footer";
+  }
+}
+
+.no-aside {
+  grid-template-areas: "header" "main" "footer";
+}
+@media screen and (min-width: 1000px) {
+  .no-aside {
+    grid-template-columns: auto;
+    grid-template-areas: "header" "main" "footer";
   }
 }
 

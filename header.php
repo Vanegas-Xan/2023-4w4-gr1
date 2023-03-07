@@ -7,8 +7,15 @@
     
 </head>
 <?php wp_head(); ?>
+<?php
+$nouvel_class = "";
+if (is_front_page()){
+    $nouvel_class = "no-aside";
+}
 
-<body <?php body_class("site");?>>
+?>
+
+<body class="site <?= $nouvel_class ?>">
 
 <header class="site__entete">
     <section class="entete__nav">
@@ -25,25 +32,10 @@
 </section>
 </header >
 
-<aside class="site__aside">
-    <h3>Menu secondaire</h3>
-    <?php 
-         
-        $category = get_queried_object();
-        if (isset($category)){
-             $menu = $category->slug;
-        }
-        else {
-            $menu = "4w4";
-        }
-   
-        echo $menu;
-        wp_nav_menu(array (             
-        "menu" =>  $menu,                    
-        "container" =>  "nav"                   
-
-)); ?>
-</aside>
+<?php 
+if(! is_front_page()) 
+    get_template_part("template-parts/aside");
+    ?>
  
     <main class="principal">
     <h1>4W4-Création d'interface et développement <?php ?></h1>

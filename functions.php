@@ -1,4 +1,10 @@
 <?php 
+
+    function google_fonts(){
+     wp_enqueue_style('google_fonts', 'https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap', null);
+     add_action('wp_enqueue_scripts', 'google_fonts');
+                        }
+
      function enfiler_css (){
     wp_enqueue_style(      '4w4-gr1-principal', //identificateur
                             get_template_directory_uri() . '/style.css', //adresse url
@@ -35,10 +41,6 @@
  * @param WP_query  $query la requête principal de WP
  */
 
-function google_fonts(){
-  wp_enqueue_style('google_fonts', 'https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap', false);
-  add_action('wp_enqueue_scripts', 'google_fonts');
- }
 
 function cidweb_modifie_requete_principal( $query ) {
   if (    $query->is_home()  //  si page d'accueill
@@ -51,6 +53,42 @@ function cidweb_modifie_requete_principal( $query ) {
     }
    }
    add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );
+
+   function perso_filtre_choix_menu($obj_menu, $arg){
+//echo "/////////////////  obj_menu";
+// var_dump($obj_menu);
+//  echo "/////////////////  arg";
+//var_dump($arg);
+// die();
+    if ($arg->menu == "cours"){
+        foreach($obj_menu as $cle => $value)
+        {
+            //  print_r($value);
+            $value->title = substr($value->title,7);
+            $value->title = wp_trim_words($value->title,3,"...");
+            //echo $value->title . '<br>';
+        }
+    }
+   return $obj_menu;
+}
+add_filter("wp_nav_menu_objects","perso_filtre_choix_menu", 10,2);
+
+/**
+ * Permet de personnalisé les titres du menu cours
+ * @param $title : titre du menu à modifier
+ *  $item : la structure «li» du menu 
+ *  $args : Objet décrivant l'ensemble des menus de notre site
+ *  $depth: Niveau de pronfondeur du menu (Retiré ici)
+ */
+function perso_menu_item_title($title, $item, $args) {
+  // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
+  if($args->menu == 'cours') { //On filtre uniquement le menu «cours»
+// Modifier la longueur du titre en fonction de nos besoins
+$title = wp_trim_words($title, 3, ' ... ');// Modifier et améliorer pour le tp1
+}
+return $title;
+}
+add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
 
 
    
