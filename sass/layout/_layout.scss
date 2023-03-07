@@ -1,0 +1,28 @@
+
+.contenu__article{
+    grid-area: content;
+    display: flex;
+    background: content-box;
+}
+
+.contenu__article article{
+    display: flex;
+    flex-direction: column;
+    padding: 41px;
+    width: 18%;
+    border-radius: 15%;
+     justify-content: space-evenly;
+ 
+}
+body{
+    width: auto;
+    height: auto;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  }
+
+  .site__logo{
+    position: relative;
+  }
+
+ 

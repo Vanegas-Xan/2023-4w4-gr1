@@ -8,7 +8,7 @@
  <main class="site__main">
    <h1> Bienvenue au de cours de 4w4</h1>
    <pre>category.php</pre>
-  
+
 
 
 ////////////////////////
@@ -27,11 +27,10 @@
       //Tout le reste de l'extraction de données est basé 
       //sur la nouvelle requête contenu dans $query 
       if ( $query->have_posts() ) :
-         while ( $query->have_posts() ) : $query->the_post(); ?>
-            <article>
-               <h2><a href="<?php the_permalink(); ?>"> <?= substr(get_the_title(), 8); ?></a></h2>
-               <p><?= wp_trim_words(get_the_excerpt(), 15) ?></p>
-            </article>
+         while ( $query->have_posts() ) : $query->the_post();
+                  get_template_part("template-parts/categorie", $category->slug);
+         ?>
+ 
          <?php endwhile; ?>
       <?php endif;
       wp_reset_postdata();?>
