@@ -1,15 +1,3 @@
-.site__entete {
-   grid-area: header;
-    grid-template-columns: 1fr 1fr 2fr
-}
-
-.menu__entete{
-    grid-area: nav;
-}
-
-.site__footer{
-    grid-area: footer;
-}
 
 
 .contenu__article{
@@ -39,15 +27,6 @@ body{
 
   }
 
-  .site{
-    max-width: 500em;
-    display: grid;
-    gap: 20px;
-    grid-template-areas:
-    "header"
-    "nav"
-    "content"
-    "footer";
-  }
+
   
  

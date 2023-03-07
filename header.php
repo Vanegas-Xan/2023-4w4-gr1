@@ -36,10 +36,6 @@
         else {
             $menu = "4w4";
         }
-
-        if(substr($menu,0,1) == '0'){
-            $menu = substr($menu, 1);
-         }
    
         echo $menu;
         wp_nav_menu(array (             

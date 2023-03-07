@@ -504,25 +504,17 @@ a:hover {
   backdrop-filter: blur(5px);
   box-shadow: 0 5px 10px rgb(0, 0, 0);
 }
+@media screen and (min-width: 400px) {
+  .blocflex__article {
+    flex: 1 0 220px;
+  }
+}
 
 .blocflex__galerie {
   flex: 1 0 100%;
 }
 
 /* --------------------------------------------- layout */
-.site__entete {
-  grid-area: header;
-  grid-template-columns: 1fr 1fr 2fr;
-}
-
-.menu__entete {
-  grid-area: nav;
-}
-
-.site__footer {
-  grid-area: footer;
-}
-
 .contenu__article {
   grid-area: content;
   display: flex;
@@ -547,13 +539,6 @@ body {
 
 .site__logo {
   position: relative;
-}
-
-.site {
-  max-width: 500em;
-  display: grid;
-  gap: 20px;
-  grid-template-areas: "header" "nav" "content" "footer";
 }
 
 /*
@@ -583,6 +568,7 @@ body {
 
 .site {
   display: grid;
+  gap: 20px;
   grid-template-columns: auto;
   grid-template-areas: "header" "aside" "main" "footer";
 }

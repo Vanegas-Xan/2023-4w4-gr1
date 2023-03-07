@@ -12,6 +12,9 @@
     background-color: mediumturquoise;
     backdrop-filter: blur(5px);
     box-shadow: 0 5px 10px rgb(0, 0, 0);
+    @media screen and (min-width:400px){
+        flex : 1 0 220px;
+    }
 }
 
 .blocflex__galerie{
