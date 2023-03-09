@@ -16,23 +16,22 @@ if (is_front_page()){
 ?>
 
 <body class="site <?= $nouvel_class ?>">
-
-<header class="site__entete">
-    <section class="entete__nav">
-
-<div class="site__logo"><?php the_custom_logo(); ?></div>
-<?= get_search_form(); ?>
-<?php wp_nav_menu(array (
+    <header class="site__entete">
+      <section class="entete__nav">
+        <div class="site__logo"><?php the_custom_logo(); ?></div>
+         <div class="menu__recherche">
+            <?= get_search_form(); ?>
+                <?php wp_nav_menu(array (
                          "menu" =>  "entete",
                          "container" =>  "nav",
                          "container_class" =>  "menu__entete"
 
-)); ?>
-
-</section>
-<a class = "site__titre" href="<?= bloginfo('url') ?>"><h3><h1><?= bloginfo('name') ?></h1></a>
-<h2 class="site__description"><?= bloginfo('description') ?></h2>
-</header >
+                    )); ?>
+        </div>
+        </section>
+        <a class = "site__titre" href="<?= bloginfo('url') ?>"><h3><h1><?= bloginfo('name') ?></h1></a>
+        <h2 class="site__description"><?= bloginfo('description') ?></h2>
+    </header >
 
 <?php 
 if(! is_front_page()) 

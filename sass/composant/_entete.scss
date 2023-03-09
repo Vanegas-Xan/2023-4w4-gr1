@@ -1,7 +1,12 @@
+
+
 .entete__nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (min-width:$largeur__mobile) {
+        flex-direction: row;
+    }
 }
 
 .site__titre {
@@ -13,9 +18,12 @@
     font-size: clamp(6rem, .3864rem + 5.4545vw, 1.375rem);
     transition: all 0.7s;
     color: rgb(233, 84, 84);
-    text-align: center;
     justify-content: end;
     gap: 20px;
+    @media screen and (min-width:$largeur__mobile) {
+        text-align: center;
+        align-items: center;
+    }
 }
 a{   text-decoration: none;
     transition: 0.3s;
@@ -31,17 +39,34 @@ a:hover{
     color: white;
     transform: scaleZ(); 
 }
+.menu__recherche{
+    display: flex;
+    flex-direction : column-reverse;
+    align-items: flex-end;
+    @media screen and (min-width : $largeur__bureau) {
+        flex-direction: row;
+    }
+}
   
 // menu__entete
 .menu__entete{ // nav 
 
 .menu{ // ul
    display: flex;
+   flex-direction:row;
    list-style-type: none ;
    justify-content: space-between;
+ 
    gap: 20px;
-    flex-wrap: wrap;
-    align-content: end;
+    transform: translateX(2rem);
+    @media screen and (min-width:500px) {
+        position: static;
+        top: auto;
+        right: auto;
+        flex-direction: colum;
+        text-align: center;
+        transform: translateX(0);
+    }
 
     .menu-item { //li
         background-color: crimson;

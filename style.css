@@ -342,6 +342,7 @@ h4 {
 
 h5 {
   font-size: clamp(0.5rem, -0.0313rem + 1.7vw, 1.5625rem);
+  font-size: 20px;
 }
 
 h6 {
@@ -350,6 +351,7 @@ h6 {
 
 P {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
+  font-size: 20px;
 }
 
 h1 {
@@ -418,6 +420,11 @@ pre {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 700px) {
+  .entete__nav {
+    flex-direction: row;
+  }
+}
 
 .site__titre {
   text-decoration: none;
@@ -427,9 +434,14 @@ pre {
   font-size: clamp(6rem, 0.3864rem + 5.4545vw, 1.375rem);
   transition: all 0.7s;
   color: rgb(233, 84, 84);
-  text-align: center;
   justify-content: end;
   gap: 20px;
+}
+@media screen and (min-width: 700px) {
+  .site__titre h1 {
+    text-align: center;
+    align-items: center;
+  }
 }
 
 a {
@@ -447,13 +459,34 @@ a:hover {
   transform: scaleZ();
 }
 
+.menu__recherche {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+@media screen and (min-width: 1000px) {
+  .menu__recherche {
+    flex-direction: row;
+  }
+}
+
 .menu__entete .menu {
   display: flex;
+  flex-direction: row;
   list-style-type: none;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap;
-  align-content: end;
+  transform: translateX(2rem);
+}
+@media screen and (min-width: 500px) {
+  .menu__entete .menu {
+    position: static;
+    top: auto;
+    right: auto;
+    flex-direction: colum;
+    text-align: center;
+    transform: translateX(0);
+  }
 }
 .menu__entete .menu .menu-item {
   background-color: crimson;
@@ -487,6 +520,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  font-size: 20em;
 }
 
 .blocflex__article {
@@ -502,38 +536,28 @@ a:hover {
   .blocflex__article {
     flex: 1 0 150px;
   }
+  .blocflex__article .blocflex__article a {
+    font-size: 20px;
+  }
+  .blocflex__article .blocflex__article p {
+    font-size: 20px;
+  }
 }
 
 .blocflex__galerie {
   flex: 1 0 100%;
 }
 
+.recherche {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 3rem;
+}
+
 /* --------------------------------------------- layout */
-.contenu__article {
-  grid-area: content;
-  display: flex;
-  background: content-box;
-}
-
-.contenu__article article {
-  display: flex;
-  flex-direction: column;
-  padding: 41px;
-  width: 18%;
-  border-radius: 15%;
-  justify-content: space-evenly;
-  font-family: "Bree+erif";
-}
-
 body {
-  width: auto;
-  height: auto;
-  background: rgb(131, 58, 180);
   background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
-}
-
-.site__logo {
-  position: relative;
 }
 
 /*

@@ -2,6 +2,7 @@
     display: flex;
     justify-content:  space-between;
     flex-wrap: wrap;
+    font-size: 20em;
 }
 
 .blocflex__article {
@@ -14,6 +15,14 @@
     box-shadow: 0 5px 10px rgb(0, 0, 0);
     @media screen and (min-width:400px){
         flex : 1 0 150px;
+
+        .blocflex__article a{
+            font-size: 20px;
+        }
+        .blocflex__article p{
+            font-size: 20px;
+        }
+        
     }
 }
 
