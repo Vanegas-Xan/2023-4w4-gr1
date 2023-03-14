@@ -20,13 +20,15 @@ if (is_front_page()){
       <section class="entete__nav">
         <div class="site__logo"><?php the_custom_logo(); ?></div>
          <div class="menu__recherche">
-            <?= get_search_form(); ?>
-                <?php wp_nav_menu(array (
+            <?php wp_nav_menu(array (
                          "menu" =>  "entete",
                          "container" =>  "nav",
                          "container_class" =>  "menu__entete"
 
-                    )); ?>
+                    )); ?> 
+                    <?= get_search_form(); ?>
+                    <input type="checkbox" id="chkBurger">
+                    <label class="burger" for = "chkBurger"><img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000000" width="32" height="32"></button>
         </div>
         </section>
         <a class = "site__titre" href="<?= bloginfo('url') ?>"><h3><h1><?= bloginfo('name') ?></h1></a>

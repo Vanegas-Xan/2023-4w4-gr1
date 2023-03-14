@@ -1,17 +1,17 @@
 <?php 
 
-    function google_fonts(){
-     wp_enqueue_style('google_fonts', 'https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap', null);
-     add_action('wp_enqueue_scripts', 'google_fonts');
-                        }
-
      function enfiler_css (){
     wp_enqueue_style(      '4w4-gr1-principal', //identificateur
                             get_template_directory_uri() . '/style.css', //adresse url
                             array(),//définir les dépendances
                             filemtime(get_template_directory() . '/style.css'), // le calcul de la version du feuille de style
                           'all'); //media
+                   
+                          wp_enqueue_style('google_fonts', 
+                          'https://fonts.googleapis.com/css2?family=Bree+Serif&family=Smokum&display=swap', false);
+                         
                         }
+                      
 
                     add_action( 'wp_enqueue_scripts', 'enfiler_css' );
                     //ajout de add_action pour enfiler style.css dans function functions.php
@@ -33,6 +33,7 @@
                       'height' => 50,
                       'width'  => 50,
                   ) );
+                  add_theme_support('custom-background');
                   /**
  * Modifie la requete principale de Wordpress avant qu'elle soit exécuté
  * le hook « pre_get_posts » se manifeste juste avant d'exécuter la requête principal

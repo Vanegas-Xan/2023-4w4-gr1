@@ -586,6 +586,7 @@ body {
 }
 
 .site {
+  box-sizing: border-box;
   display: grid;
   gap: 20px;
   grid-template-columns: auto;
