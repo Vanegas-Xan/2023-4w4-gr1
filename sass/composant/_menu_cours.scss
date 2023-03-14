@@ -2,8 +2,10 @@
   .menu{
     display: flex;
     flex-direction: row;
-    @media screen and (min-width : $largeur_bureau) {
-    flex-direction: column;
+    flex-wrap: wrap;
+    @media screen and (min-width : $largeur__bureau) {
+        flex-direction: column;
+        justify-content: flex-end;
 }
 
     .menu-item{
@@ -12,18 +14,15 @@
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            flex-wrap: nowrap;
             padding: 10px;
          
             @media screen and (min-width : $largeur__bureau) {
-                align-items: flex-start;
+              
                 justify-content: flex-start;
                 flex-wrap: nowrap ;
 
             }
-            code{
-
-            }
+            code{}
             p{
                 display: none;
                 @media screen and (min-width : $largeur__bureau) {

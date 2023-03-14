@@ -4,13 +4,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media screen and (min-width:$largeur__mobile) {
-        flex-direction: row;
-    }
+
 }
 
 .site__titre {
    font-size: clamp(17em, 0.38641em + 2,45454vw, 4,37373em);
+   font-family: 'Smokum', cursive;
     a{
         text-decoration: none;
     }
@@ -22,7 +21,7 @@
     @media screen and (min-width : $largeur__bureau) {
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
     }
 }
 
@@ -63,7 +62,7 @@ a:hover{
     transform: translateX(300px);
     transition: transform .5s;
     @media screen and (min-width : $largeur__tablette) {
-        position: static;
+        //position: static;
         transform: translateX(0px);
     }
     .menu{ // ul
@@ -76,7 +75,7 @@ a:hover{
            align-items: center;
     }
         .menu_item { //li
-                a{
+                a{ 
                     display: block;
                     padding : 3px 5px;;
                     text-decoration: none;

@@ -7,8 +7,9 @@
                             filemtime(get_template_directory() . '/style.css'), // le calcul de la version du feuille de style
                           'all'); //media
                    
-                          wp_enqueue_style('google_fonts', 
-                          'https://fonts.googleapis.com/css2?family=Bree+Serif&family=Smokum&display=swap', false);
+                          wp_enqueue_style("google_font",
+                          "https://fonts.googleapis.com/css2?family=Smokum&display=swap",
+                          false);     
                          
                         }
                       
@@ -85,13 +86,14 @@ function perso_menu_item_title($title, $item, $args) {
   // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
   if($args->menu == 'cours') { //On filtre uniquement le menu «cours»
 // Modifier la longueur du titre en fonction de nos besoins
-$title = wp_trim_words($title, 3, ' ... ');// Modifier et améliorer pour le tp1
-}
+    $sigle = substr($title,4,3);
+    $title = substr($title, 7);
+    $title = "<code>" .$sigle. "</code>" . "<p>" . wp_trim_words($title, 1, ' ... ') . "</p>" ; // A modifier am.liorer pour le tp1}
 return $title;
 }
 add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
 
-
+}
    
  // git add --all
  // git status

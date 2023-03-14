@@ -5,6 +5,7 @@
     grid-area: header;
   padding: 1rem clamp(1rem, 3vw, 20rem);
   background-color: antiquewhite;
+  
 }
 .site__main{
     grid-area: main;
@@ -14,8 +15,10 @@
 }
 .site__footer{
     grid-area: footer;
+     background-color: #3e3c39;
         //padding: 1rem clamp(1rem, 3vw, 20rem);
-    background-color: antiquewhite;
+       
+   
 }
 
 .site__aside{

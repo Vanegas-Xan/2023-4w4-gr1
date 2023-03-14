@@ -20,6 +20,7 @@ if (is_front_page()){
       <section class="entete__nav">
         <div class="site__logo"><?php the_custom_logo(); ?></div>
          <div class="menu__recherche">
+         <input type="checkbox" id="chkBurger">
             <?php wp_nav_menu(array (
                          "menu" =>  "entete",
                          "container" =>  "nav",
@@ -27,7 +28,7 @@ if (is_front_page()){
 
                     )); ?> 
                     <?= get_search_form(); ?>
-                    <input type="checkbox" id="chkBurger">
+                   
                     <label class="burger" for = "chkBurger"><img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000000" width="32" height="32"></button>
         </div>
         </section>
