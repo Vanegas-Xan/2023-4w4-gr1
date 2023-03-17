@@ -7,52 +7,38 @@
     
 </head>
 <?php wp_head(); ?>
+<?php
+$nouvel_class = "";
+if (is_front_page()){
+    $nouvel_class = "no-aside";
+}
 
-<body <?php body_class("site");?>>
+?>
 
-<header class="site__entete">
-    <section class="entete__nav">
-<a class = "site__titre" href="<?= bloginfo('url') ?>"><h3><h1><?= bloginfo('name') ?></h1></a>
-<h2 class="site__description"><?= bloginfo('description') ?></h2>
-<div class="site__logo"><?php the_custom_logo(); ?></div>
-<?php wp_nav_menu(array (
+<body class="site <?= $nouvel_class ?>">
+    <header class="site__entete">
+      <section class="entete__nav">
+        <div class="site__logo"><?php the_custom_logo(); ?></div>
+         <div class="menu__recherche">
+         <input type="checkbox" id="chkBurger">
+            <?php wp_nav_menu(array (
                          "menu" =>  "entete",
                          "container" =>  "nav",
                          "container_class" =>  "menu__entete"
 
-)); ?>
-<?= get_search_form(); ?>
-</section>
-</header >
+                    )); ?> 
+                    <?= get_search_form(); ?>
+                   
+                    <label class="burger" for = "chkBurger"><img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000000" width="32" height="32"></button>
+        </div>
+        </section>
+        <a class = "site__titre" href="<?= bloginfo('url') ?>"><h3><h1><?= bloginfo('name') ?></h1></a>
+        <h2 class="site__description"><?= bloginfo('description') ?></h2>
+    </header >
 
-<aside class="site__aside">
-    <h3>Menu secondaire</h3>
-    <?php 
-         
-        $category = get_queried_object();
-        if (isset($category)){
-             $menu = $category->slug;
-        }
-        else {
-            $menu = "4w4";
-        }
-
-        if(substr($menu,0,1) == '0'){
-            $menu = substr($menu, 1);
-         }
-   
-        echo $menu;
-        wp_nav_menu(array (             
-        "menu" =>  $menu,                    
-        "container" =>  "nav"                   
-
-)); ?>
-</aside>
- 
-    <main class="principal">
-    <h1>4W4-Création d'interface et développement <?php ?></h1>
-    
-    </main>
-    
+<?php 
+if(! is_front_page()) 
+    get_template_part("template-parts/aside");
+    ?>
 
 </html>

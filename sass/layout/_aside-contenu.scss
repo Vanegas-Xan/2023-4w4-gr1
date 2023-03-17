@@ -5,28 +5,35 @@
     grid-area: header;
   padding: 1rem clamp(1rem, 3vw, 20rem);
   background-color: antiquewhite;
+  
 }
+
+
+
+
 .site__main{
     grid-area: main;
     overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
     //padding: 1rem clamp(1rem, 3vw, 20rem);
-    background-color: bisque;
+    background-color: rgb(255, 188, 111);
 }
 .site__footer{
     grid-area: footer;
+     background-color: #0b09099c;
         //padding: 1rem clamp(1rem, 3vw, 20rem);
-    background-color: antiquewhite;
+       
+   
 }
 
 .site__aside{
     grid-area: aside;
-    background-color: rgb(163, 121, 65);
+    background-color: rgb(255, 7, 7);
 }
 
 .site{
-    max-width: 500em;
-    gap: 20px;
+    box-sizing: border-box;
     display: grid;
+    gap: 20px;
     grid-template-columns: auto;
     grid-template-areas:
       "header"
@@ -34,12 +41,27 @@
       "main"
       "footer";
     //row-gap: 50px;
-    @media screen and (min-width:1000px) {
+    @media screen and (min-width:$largeur__bureau) {
         grid-template-columns: 20% auto;
         grid-template-areas:
         "header header"
         "aside main"
         "footer footer";
+
+    }
+}
+
+.no-aside{
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    @media screen and (min-width:$largeur__bureau) {
+        grid-template-columns:  auto;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
 
     }
 }
