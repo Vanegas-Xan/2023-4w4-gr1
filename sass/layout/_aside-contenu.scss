@@ -7,14 +7,15 @@
   
 }
 
-
-
-
 .site__main{
     grid-area: main;
     overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
     //padding: 1rem clamp(1rem, 3vw, 20rem);
     background-color: rgb(255, 188, 111);
+
+    article{
+        padding: 15px;
+    }
 
     h1{
         padding : 10px;
@@ -23,16 +24,13 @@
 .site__footer{
     grid-area: footer;
      background-color: #0b09099c;
-        //padding: 1rem clamp(1rem, 3vw, 20rem);
-       
-   
+        //padding: 1rem clamp(1rem, 3vw, 20rem);  
 }
 
 .site__logo{
     position: relative;
 
   }
-
 
 .site__aside{
     grid-area: aside;
@@ -53,7 +51,6 @@
       "aside"
       "main"
       "footer";
-    //row-gap: 50px;
     @media screen and (min-width:$largeur__bureau) {
         grid-template-columns: 20% auto;
         grid-template-areas:

@@ -461,8 +461,16 @@ pre {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(70, 62, 62);
-  height: 5em;
   width: 100%;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 700px) {
+  .entete__nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: 20em;
+  }
 }
 
 .menu__recherche {
@@ -564,12 +572,19 @@ ul li li::before {
 /*----------------------------------------Bouton burger */
 .burger {
   display: block;
+  text-align: center;
+  background-color: aliceblue;
+  border-radius: 10px;
+  transition: 2ms;
   border: 1px solid #aaa;
 }
 @media screen and (min-width: 800px) {
   .burger {
     display: none;
   }
+}
+.burger:active {
+  transform: rotateX(50deg);
 }
 
 #chkBurger:checked ~ .menu__entete {
@@ -692,10 +707,6 @@ ul li li::before {
 }
 
 /* --------------------------------------------- layout */
-/*body{
-
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-  }*/
 body {
   background-color: #692b2b;
 }
@@ -712,6 +723,9 @@ body {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
   background-color: rgb(255, 188, 111);
+}
+.site__main article {
+  padding: 15px;
 }
 .site__main h1 {
   padding: 10px;

@@ -1,21 +1,23 @@
-
-
 .entete__nav{ // logo. le menu, la recherche, bouton burger
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(70, 62, 62);
-    height: 5em;
     width: 100%;
-    
-
+    overflow-x: hidden;
+   
+    @media screen and (max-width : $largeur__mobile) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        height: 20em;
+    }
 }
-
-
 .menu__recherche{
     display: flex;
     flex-direction : column-reverse;
     align-items: flex-end;
+
     @media screen and (min-width : $largeur__bureau) {
         flex-direction: row;
         align-items: center;
@@ -30,19 +32,20 @@
     color: rgb(233, 84, 84);
     justify-content: end;
     gap: 20px;
+
     @media screen and (min-width:$largeur__mobile) {
         text-align: center;
         align-items: center;
     }
 }
-a{   text-decoration: none;
-    transition: 0.3s;
-  
+a{   
+    text-decoration: none;
+    transition: 0.3s; 
 }
 
 .site__titre :hover{
     color: white;
-    }
+}
 
    
 // menu__entete
@@ -50,6 +53,7 @@ a{   text-decoration: none;
     width: 100%;
     transform: translateX(300px);
     transition: transform .5s;
+
     @media screen and (min-width : $largeur__tablette) {
         //position: static;
         transform: translateX(0px);
@@ -57,18 +61,20 @@ a{   text-decoration: none;
     .menu{ // ul
         width: 100%;
         padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      list-style-type:none ;
-       @media screen and (min-width : $largeur__tablette) {
-          flex-direction: row;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        list-style-type:none ;
+
+        @media screen and (min-width : $largeur__tablette) {
+           flex-direction: row;
            align-items: center;
            padding: 13px;
     }
         .menu-item { //li
             padding: 8px;
-           a{
+        
+              a{
                 
                 font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
                 background-color: crimson;
@@ -107,18 +113,25 @@ a{   text-decoration: none;
     /*----------------------------------------Bouton burger */
     .burger{
         display: block;
-         border: 1px solid #aaa;
-         @media screen and (min-width: $largeur__tablette) {
+        text-align: center;
+        background-color: aliceblue;
+        border-radius: 10px;
+        transition: 2ms;
+        border: 1px solid #aaa;
+         
+        @media screen and (min-width: $largeur__tablette) {
             display: none;
+           }
+
+           &:active{
+            transform: rotateX(50deg);
            }
     }
     #chkBurger:checked ~ .menu__entete{
             transform: translateX(0);
-          
     }
 
     #chkBurger{
-       display: none;
-       
+       display: none; 
 }
     

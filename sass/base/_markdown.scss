@@ -35,20 +35,17 @@ ol li {
     width: 1rem;
     height: 1rem;
     list-style-type: none;
-     
+
       }
       ul li li::before
       {
         background: transparent;
         content: ".";
       }
-
-
 /*
 li > ol {}
 li > ul {}
 */
-
 pre {
     margin-left: 15px;
     font-family: 'Anton', sans-serif;
