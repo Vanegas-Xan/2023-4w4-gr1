@@ -1,41 +1,24 @@
 h1 {
     font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);
-    @media screen and (max-width : $largeur__bureau) {
-      font-size: 3em;
-      text-align: center;
-    }
-  }
-  .titre__bienvenue{
-    margin-left: 15px;
   }
   h2 {
     font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
   }
   h3 {
     font-size: clamp(0.5625rem, -0.25rem + 2.6vw, 2.1875rem);
-    @media screen and (max-width : $largeur__bureau) {
-      font-size: 2em;
-      text-align: center;
-    }
-    
   }
   h4 {
     font-size: clamp(0.5rem, -0.1875rem + 2.2vw, 1.875rem);
   }
   h5 {
     font-size: clamp(0.5rem, -0.0313rem + 1.7vw, 1.5625rem);
-    font-size: 20px;
   }
   h6 {
     font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
-    @media screen and (max-width : $largeur__bureau) {
-      font-size: 15px;
-       }
   }
   
-  p {
+  P {
     font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
-    font-size: 20px;
   }
   
   h1 {
@@ -50,7 +33,6 @@ h1 {
   h3,
   h4,
   h5,
- 
   h6 {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     margin : .5rem 0;
@@ -59,6 +41,4 @@ h1 {
   p {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
-  
-    
   }
