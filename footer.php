@@ -7,10 +7,9 @@
                    "container" =>  "nav", 
                    "container_class" =>  "menu__footer"
      )); ?>
-
-    <section class="lien">Lien #1</section>
-    <section class="lien">Lien #2</section>
-    <section class="lien">Lien #3</section>
+    <hr>
+    <section class="lien">Copyright © 2023 - Collège de Maisonneuve. Tous droits réservés.</section>
+  
 </footer>
 
 <?php 

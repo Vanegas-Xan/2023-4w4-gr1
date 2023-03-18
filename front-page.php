@@ -6,8 +6,8 @@
 
 <?php get_header(); ?>
     <main class="site__main">
-        <pre>front-page.php</pre>
-        <h1>Bienvenue sur 4W4</h1>
+        <pre>Front-page.php</pre>
+        <h1 class="titre__bienvenue">Bienvenue sur 4W4</h1>
         <section class="blocflex">
             <?php if(have_posts()):
                 while (have_posts()): the_post(); 

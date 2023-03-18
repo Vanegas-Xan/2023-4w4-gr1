@@ -8,7 +8,7 @@
                           'all'); //media
                    
                           wp_enqueue_style("google_font",
-                          "https://fonts.googleapis.com/css2?family=Smokum&display=swap",
+                          "https://fonts.googleapis.com/css2?family=Anton&display=swap",
                           false);     
                          
                         }
@@ -31,8 +31,8 @@
 
                     add_theme_support( 'title-tag' );
                     add_theme_support( 'custom-logo', array(
-                      'height' => 50,
-                      'width'  => 50,
+                      'height' => 150,
+                      'width'  => 150
                   ) );
                   add_theme_support('custom-background');
                   /**

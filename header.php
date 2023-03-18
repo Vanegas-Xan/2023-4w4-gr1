@@ -18,7 +18,7 @@ if (is_front_page()){
 <body class="site <?= $nouvel_class ?>">
     <header class="site__entete">
       <section class="entete__nav">
-        <div class="site__logo"><?php the_custom_logo(); ?></div>
+        <div class="site__logo"><img src="4W4.png" alt="site logos" width="500" height="600"><?php the_custom_logo(); ?></div>
          <div class="menu__recherche">
          <input type="checkbox" id="chkBurger">
             <?php wp_nav_menu(array (

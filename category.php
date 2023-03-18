@@ -7,7 +7,7 @@
  <?php get_header(); ?>
  <main class="site__main">
    <h1> Bienvenue au de cours de 4w4</h1>
-   <pre>category.php</pre>
+   <pre>Category.php</pre>
 
 
 

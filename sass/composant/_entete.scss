@@ -4,6 +4,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(70, 62, 62);
+    height: 5em;
+    width: 100%;
+    
 
 }
 
@@ -21,6 +25,7 @@
 
 .site__titre h1{
     font-size: clamp(9em, 0.38641em + 2.45454vw, 4.37373em);
+    text-align: center;
     transition: all 0.7s;
     color: rgb(233, 84, 84);
     justify-content: end;
@@ -36,7 +41,6 @@ a{   text-decoration: none;
 }
 
 .site__titre :hover{
-    transform: skew(180deg, 1deg);
     color: white;
     }
 
@@ -44,9 +48,6 @@ a{   text-decoration: none;
 // menu__entete
 .menu__entete{ // nav 
     width: 100%;
-    position: absolute;
-    top: 30px;
-    right: 0;
     transform: translateX(300px);
     transition: transform .5s;
     @media screen and (min-width : $largeur__tablette) {
@@ -63,9 +64,12 @@ a{   text-decoration: none;
        @media screen and (min-width : $largeur__tablette) {
           flex-direction: row;
            align-items: center;
+           padding: 13px;
     }
         .menu-item { //li
             padding: 8px;
+        
+           
             a{
                 
                 font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -75,19 +79,19 @@ a{   text-decoration: none;
                 border-radius: 15px ;
                 color: greenyellow;
                      text-decoration: none;
+                     
                  }
                  
         
                  &:hover{
 
-                    color:#ffffff;
+                    color:#ffff17;
                     transform: translateY(-10px);
                     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 2);
                   }
         }
 }
 }
-
 /*---------------------pour annuler le pseudo-element ::before */
 .menu__entete .menu  li::before {
     content: "";
@@ -113,6 +117,7 @@ a{   text-decoration: none;
     }
     #chkBurger:checked ~ .menu__entete{
             transform: translateX(0);
+          
     }
 
     #chkBurger{

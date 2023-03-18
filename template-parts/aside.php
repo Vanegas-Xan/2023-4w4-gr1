@@ -10,7 +10,7 @@
         echo $menu;
         wp_nav_menu(array (             
         "menu" => $menu,                    
-        "container" => "nav"                   
+        "container" => "menu__side"                   
 
 )); ?>
 </aside>
