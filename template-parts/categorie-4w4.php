@@ -23,6 +23,14 @@ $duree = "90h";
     // the_excerpt //  echo Le resumé du post
     // the_content //  echo L'ensemble du contune d'un article
 
+    /*
+     Question possible :
+     Amélioration du search bar
+     Ajout d'un template part
+     Ajout d'un menu
+
+    */
+
 
 
 ?>
