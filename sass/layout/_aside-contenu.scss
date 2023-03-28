@@ -3,27 +3,42 @@
 */
 .site__entete{
     grid-area: header;
-  padding: 1rem clamp(1rem, 3vw, 20rem);
   background-color: antiquewhite;
   
 }
+
 .site__main{
     grid-area: main;
     overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
     //padding: 1rem clamp(1rem, 3vw, 20rem);
-    background-color: bisque;
+    background-color: rgb(255, 188, 111);
+
+    article{
+        padding: 15px;
+    }
+
+    h1{
+        padding : 10px;
+    }
 }
 .site__footer{
     grid-area: footer;
-     background-color: #3e3c39;
-        //padding: 1rem clamp(1rem, 3vw, 20rem);
-       
-   
+     background-color: #0b09099c;
+        //padding: 1rem clamp(1rem, 3vw, 20rem);  
 }
+
+.site__logo{
+    position: relative;
+
+  }
 
 .site__aside{
     grid-area: aside;
-    background-color: rgb(163, 121, 65);
+    background-color: rgb(52, 13, 13);
+
+   h3{
+        color: aliceblue;
+   }
 }
 
 .site{
@@ -36,7 +51,6 @@
       "aside"
       "main"
       "footer";
-    //row-gap: 50px;
     @media screen and (min-width:$largeur__bureau) {
         grid-template-columns: 20% auto;
         grid-template-areas:

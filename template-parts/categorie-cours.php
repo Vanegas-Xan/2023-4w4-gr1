@@ -15,4 +15,7 @@ $duree = "90h";
     <h6><?= $grand_titre; ?></h6>
     <p><?= wp_trim_words(get_the_excerpt(), 15) ?></p>
     <h6><?= $duree; ?></h6>
+    <p> <?php the_field('enseignant')?></p>
+    <p> <?php the_field('domaine')?></p>
+
 </article>

@@ -14,41 +14,41 @@ ol {
     }
 }
 
+ul,
 
+ul li,
 
-ul {
-  
-}
-
-ul li, 
 ol li {
     margin: .5rem 0rem;
+    list-style-type: none ;
+    color: #555;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
  ul   li::before {
     content: "-";
     background: rgb(67, 224, 235);
-    border-radius: 50%;
+    border-radius: 70%;
     padding-inline: .3rem;
     margin-inline-end: .3rem;
     width: 1rem;
     height: 1rem;
+    list-style-type: none;
+
       }
       ul li li::before
       {
         background: transparent;
         content: ".";
       }
-
-
 /*
 li > ol {}
 li > ul {}
 */
-
 pre {
-
+    margin-left: 15px;
+    font-family: 'Anton', sans-serif;
     background-color : #555;
     color : #eee;
     overflow-x: scroll;

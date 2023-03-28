@@ -1,23 +1,23 @@
-
-
 .entete__nav{ // logo. le menu, la recherche, bouton burger
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-}
-
-.site__titre {
-   font-size: clamp(17em, 0.38641em + 2,45454vw, 4,37373em);
-   font-family: 'Smokum', cursive;
-    a{
-        text-decoration: none;
+    background-color: rgb(70, 62, 62);
+    width: 100%;
+    overflow-x: hidden;
+   
+    @media screen and (max-width : $largeur__mobile) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        height: 20em;
     }
 }
 .menu__recherche{
     display: flex;
     flex-direction : column-reverse;
     align-items: flex-end;
+
     @media screen and (min-width : $largeur__bureau) {
         flex-direction: row;
         align-items: center;
@@ -26,66 +26,76 @@
 }
 
 .site__titre h1{
-    font-size: clamp(1rem, 0.3864rem + 2.4545vw, 4.375rem);
-    
+    font-size: clamp(9em, 0.38641em + 2.45454vw, 4.37373em);
+    text-align: center;
     transition: all 0.7s;
     color: rgb(233, 84, 84);
     justify-content: end;
     gap: 20px;
+
     @media screen and (min-width:$largeur__mobile) {
         text-align: center;
         align-items: center;
     }
 }
-a{   text-decoration: none;
-    transition: 0.3s;
-   
+a{   
+    text-decoration: none;
+    transition: 0.3s; 
 }
 
 .site__titre :hover{
-    transform: skew(180deg, 1deg);
     color: white;
-    }
-
-   
-a:hover{
-    color: white;
-    transform: scaleZ(); 
 }
 
-  
+   
 // menu__entete
 .menu__entete{ // nav 
-    /*position: absolute;
-    top: 30px;
-    right: 0;*/
+    width: 100%;
     transform: translateX(300px);
     transition: transform .5s;
+
     @media screen and (min-width : $largeur__tablette) {
         //position: static;
         transform: translateX(0px);
     }
     .menu{ // ul
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      list-style-type:none ;
-       @media screen and (min-width : $largeur__tablette) {
-          flex-direction: row;
-           align-items: center;
-    }
-        .menu_item { //li
-                a{ 
-                    display: block;
-                    padding : 3px 5px;;
-                    text-decoration: none;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        list-style-type:none ;
 
-                }
+        @media screen and (min-width : $largeur__tablette) {
+           flex-direction: row;
+           align-items: center;
+           padding: 13px;
+    }
+        .menu-item { //li
+            padding: 8px;
+        
+              a{
+                
+                font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+                background-color: crimson;
+                padding: 15px;
+                transition: 0.3s;
+                border-radius: 15px ;
+                color: greenyellow;
+                     text-decoration: none;
+                     
+                 }
+                 
+                 &:hover{
+
+                    color:#ffff17;
+                    transform: translateY(-10px);
+                    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 2);
+                  }
         }
 }
 }
-
-/*---------------------pour annuler le pseudo-element ::before*/
+/*---------------------pour annuler le pseudo-element ::before */
 .menu__entete .menu  li::before {
     content: "";
     background: transparent;
@@ -103,9 +113,18 @@ a:hover{
     /*----------------------------------------Bouton burger */
     .burger{
         display: block;
-         border: 1px solid #aaa;
-         @media screen and (min-width: $largeur__tablette) {
+        text-align: center;
+        background-color: aliceblue;
+        border-radius: 10px;
+        transition: 2ms;
+        border: 1px solid #aaa;
+         
+        @media screen and (min-width: $largeur__tablette) {
             display: none;
+           }
+
+           &:active{
+            transform: rotateX(50deg);
            }
     }
     #chkBurger:checked ~ .menu__entete{
@@ -113,7 +132,6 @@ a:hover{
     }
 
     #chkBurger{
-       display: none;
-       
+       display: none; 
 }
     
