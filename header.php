@@ -15,6 +15,7 @@ if (is_front_page()){
 
 ?>
 
+
 <body class="site <?= $nouvel_class ?>">
     <header class="site__entete">
       <section class="entete__nav">
@@ -36,9 +37,12 @@ if (is_front_page()){
         <h2 class="site__description"><?= bloginfo('description') ?></h2>
     </header >
 
+ 
+
 <?php 
 if(! is_front_page()) 
     get_template_part("template-parts/aside");
     ?>
+
 
 </html>
