@@ -405,14 +405,14 @@ ol {
 }
 @media screen and (min-width: 400px) {
   ul,
-  ol {
+ol {
     margin: 1rem 0.5rem;
     padding: 0 13px;
   }
 }
 @media screen and (min-width: 700px) {
   ul,
-  ol {
+ol {
     margin: 1rem 0.5rem;
     padding: 0 15px;
   }
