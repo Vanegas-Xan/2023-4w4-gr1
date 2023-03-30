@@ -6,16 +6,7 @@
 ?>
 <?php get_header(); ?>
 
-<?php
-$nouvel_class = "";
-if (is_404()){
-    $nouvel_class = "no-aside";
-}
-
-?>
-
-
- <main class="site <?= $nouvel_class ?>">
+ <main >
   <h3>404.php</h3>
   <h1 class="titre__404">Page introuvable, vous pouvez une recherche</h1>
 
@@ -43,15 +34,11 @@ if (is_404()){
             "container" => "menu__side"                   
 
        )); 
+       
        ?>
+
+       
      </div>
 </main>
-
-
-<?php 
-if(! is_404()) 
-    get_template_part("template-parts/aside");
-    ?>
-
 
 <?php get_footer(); ?>

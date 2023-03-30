@@ -9,6 +9,9 @@
 <?php wp_head(); ?>
 <?php
 $nouvel_class = "";
+if (is_404()){
+    $nouvel_class = "no-aside";
+}
 if (is_front_page()){
     $nouvel_class = "no-aside";
 }
@@ -40,9 +43,9 @@ if (is_front_page()){
  
 
 <?php 
-if(! is_front_page()) 
+if(! is_front_page() && ! is_404()) 
     get_template_part("template-parts/aside");
+ 
     ?>
-
 
 </html>
