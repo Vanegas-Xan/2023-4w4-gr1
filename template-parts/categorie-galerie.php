@@ -5,6 +5,7 @@ Cet article contient uniquement une galerie
 */
 ?>
 <article class="blocflex__galerie">
+<?php the_content(); ?>
 <p> <?php the_field('galerie')?></p>
 </article>
 </p>

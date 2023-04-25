@@ -1,0 +1,15 @@
+.menu-evenement-container{//nav
+    background-color: transparent;
+    .menu{ //ul
+        display: flex;
+        justify-content: space-between;
+        .menu{
+            //li
+            display: flex;
+            flex-direction: column;
+            border:2px solid grey ;
+            height: 100px;
+            margin: 10px ;
+        }
+    }
+}
