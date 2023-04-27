@@ -134,3 +134,6 @@ add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
 ) );
 }
 add_action( 'widgets_init', 'enregistrer_sidebar' );
+
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size (150, 150, true);

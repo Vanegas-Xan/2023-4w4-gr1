@@ -629,7 +629,7 @@ ul li li::before {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-size: 20em;
+  font-size: 2em;
   min-height: 100vh;
 }
 
@@ -657,6 +657,16 @@ ul li li::before {
 
 .blocflex__galerie {
   flex: 1 0 100%;
+}
+
+.blocflex__figure {
+  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+.blocflex__figure img {
+  display: block;
+  width: 150px;
 }
 
 .recherche {
@@ -720,6 +730,14 @@ ul li li::before {
   border: 2px solid grey;
   height: 100px;
   margin: 10px;
+}
+
+.article__single h3 {
+  display: flex;
+  align-items: center;
+}
+.article__single h3 img {
+  margin: 5px;
 }
 
 /* --------------------------------------------- layout */
