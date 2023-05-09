@@ -731,6 +731,18 @@ ul li li::before {
   height: 100px;
   margin: 10px;
 }
+.menu-evenement-container .menu a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-evenement-container .menu a .title {
+  font-size: 1.5rem;
+}
+.menu-evenement-container .menu a .description {
+  font-size: 1rem;
+}
 
 .article__single h3 {
   display: flex;
