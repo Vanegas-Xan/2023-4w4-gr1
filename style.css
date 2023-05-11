@@ -338,6 +338,14 @@ h1 {
   margin-left: 15px;
 }
 
+.site__main h2 {
+  margin: 21px;
+}
+
+.site__description {
+  margin: 26px;
+}
+
 h2 {
   font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
 }
@@ -427,17 +435,17 @@ ol li {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-ul li::before {
-  content: "-";
-  background: rgb(67, 224, 235);
-  border-radius: 70%;
-  padding-inline: 0.3rem;
-  margin-inline-end: 0.3rem;
-  width: 1rem;
-  height: 1rem;
-  list-style-type: none;
-}
+/*ul   li::before {
+   content: "-";
+   background: rgb(67, 224, 235);
+   border-radius: 70%;
+   padding-inline: .3rem;
+   margin-inline-end: .3rem;
+   width: 1rem;
+   height: 1rem;
+   list-style-type: none;
 
+     } */
 ul li li::before {
   background: transparent;
   content: ".";
@@ -625,12 +633,18 @@ ul li li::before {
   padding: 10px;
 }
 
-.block__flex {
+.sidebar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.blocflex {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   font-size: 2em;
-  min-height: 100vh;
+  min-height: 12vh;
 }
 
 .blocflex__article {
@@ -724,18 +738,24 @@ ul li li::before {
   display: flex;
   justify-content: space-between;
 }
-.menu-evenement-container .menu .menu {
+.menu-evenement-container .menu .menu-item {
+  background-color: cornflowerblue;
   display: flex;
   flex-direction: column;
-  border: 2px solid grey;
+  border-radius: 2px 2px 2px 2px;
+  content: none;
+  margin-left: 8em;
   height: 100px;
   margin: 10px;
+  margin-left: 14em;
+  text-align: center;
 }
 .menu-evenement-container .menu a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 30px;
 }
 .menu-evenement-container .menu a .title {
   font-size: 1.5rem;

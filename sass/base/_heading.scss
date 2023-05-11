@@ -8,9 +8,18 @@ h1 {
   .titre__bienvenue{
     margin-left: 15px;
   }
+
+  .site__main h2{
+    margin: 21px;
+  }
+
+  .site__description {
+    margin: 26px;
+  }
   h2 {
     font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
   }
+
   h3 {
     font-size: clamp(0.5625rem, -0.25rem + 2.6vw, 2.1875rem);
     @media screen and (max-width : $largeur__bureau) {

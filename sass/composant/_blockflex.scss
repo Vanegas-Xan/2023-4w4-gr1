@@ -1,9 +1,9 @@
-.block__flex{
+.blocflex{
     display: flex;
     justify-content:  space-between;
     flex-wrap: wrap;
     font-size: 2em;
-    min-height: 100vh;
+    min-height: 12vh;
 }
 
 .blocflex__article {

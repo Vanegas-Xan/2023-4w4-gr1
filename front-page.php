@@ -9,10 +9,12 @@
         <pre>Front-page.php</pre>
         <h1 class="titre__bienvenue">Bienvenue sur 4W4</h1>
         <h2> Les Évenements à venir</h2>
+        <section class="blocflex">
         <?php wp_nav_menu(array (
                    "menu" =>  "evenement",    
                    "container" =>  "nav"
      )); ?>
+     </section>
         <section class="blocflex">
         
             <?php if(have_posts()):
