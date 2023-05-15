@@ -1,4 +1,5 @@
 .site__footer{
+    
     h3{
         color: aliceblue;
         padding: 15px;
@@ -20,6 +21,17 @@
     }
 }
 
+.sidebar__footer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.footer__col{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
 .lien{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;

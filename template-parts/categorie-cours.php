@@ -6,7 +6,7 @@
 $titre = get_the_title();
 $sigle = substr($titre,0,7);
 $grand_titre = substr($titre, 7,-5);
-$duree = "90h";
+$duree = substr($titre, strpos($titre, '('));
 
 ?>
 
@@ -15,4 +15,7 @@ $duree = "90h";
     <h6><?= $grand_titre; ?></h6>
     <p><?= wp_trim_words(get_the_excerpt(), 15) ?></p>
     <h6><?= $duree; ?></h6>
+    <p> <?php the_field('enseignant')?></p>
+    <p> <?php the_field('domaine')?></p>
+
 </article>

@@ -9,8 +9,10 @@
 <main class="site__main">
 <?php if(have_posts()): ?>
         <?php while(have_posts()): the_post(); ?>
-        <article>
-                <h3><?php the_title(); ?></h3>
+        <article class="article__single">
+        
+        
+        <?php the_post_thumbnail("medium");?> <h3><?php the_title(); ?></h3>
                     <?php the_content(); // Affiche le contenu des articles ?>
         </article>
         <hr>

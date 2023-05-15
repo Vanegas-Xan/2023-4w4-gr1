@@ -2,7 +2,8 @@
     display: flex;
     justify-content:  space-between;
     flex-wrap: wrap;
-    font-size: 20em;
+    font-size: 2em;
+    min-height: 100vh;
 }
 
 .blocflex__article {
@@ -30,4 +31,15 @@
 
 .blocflex__galerie{
     flex: 1 0 100%;
+}
+
+.blocflex__figure{
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+
+    img {
+        display: block;
+       width: 150px;
+    }
 }

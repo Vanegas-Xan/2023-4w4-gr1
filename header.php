@@ -15,7 +15,7 @@ if (is_front_page()){
 
 ?>
 
-<body class="site <?= $nouvel_class ?>">
+<body class="custom-background site <?= $nouvel_class ?>">
     <header class="site__entete">
       <section class="entete__nav">
         <div class="site__logo"><?php the_custom_logo(); ?></div>

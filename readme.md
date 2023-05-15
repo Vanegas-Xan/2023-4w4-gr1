@@ -1,11 +1,10 @@
-# TP1
+# Lab4 ACF
 ## 4w4-Création d'interface et développement web
 ### Auteur : Xander Vanegas
 
 #### Objectifs: 
--  Le design général permettre de mettre en valeur le programme TIM du colll`ge de Maisonneuve
--  Continuer de faire progrésser le thème
--  Déployer le projet sur siteground
+- Afficher les champs personnalisés
+- Amélioration du design du thème
 
 
 ##### Lien de référence

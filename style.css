@@ -618,6 +618,18 @@ ul li li::before {
   padding-bottom: 15px;
 }
 
+.sidebar__footer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .lien {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
@@ -629,7 +641,8 @@ ul li li::before {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-size: 20em;
+  font-size: 2em;
+  min-height: 100vh;
 }
 
 .blocflex__article {
@@ -656,6 +669,16 @@ ul li li::before {
 
 .blocflex__galerie {
   flex: 1 0 100%;
+}
+
+.blocflex__figure {
+  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+.blocflex__figure img {
+  display: block;
+  width: 150px;
 }
 
 .recherche {
@@ -704,6 +727,29 @@ ul li li::before {
   .menu-cours-container .menu .menu-item a p {
     display: block;
   }
+}
+
+.menu-evenement-container {
+  background-color: transparent;
+}
+.menu-evenement-container .menu {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-evenement-container .menu .menu {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid grey;
+  height: 100px;
+  margin: 10px;
+}
+
+.article__single h3 {
+  display: flex;
+  align-items: center;
+}
+.article__single h3 img {
+  margin: 5px;
 }
 
 /* --------------------------------------------- layout */
