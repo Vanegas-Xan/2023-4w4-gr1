@@ -22,14 +22,15 @@
 
 .sidebar__footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 10px;
-}
-
-.footer__col{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+    @media screen and (min-width:800px) {
+   
+        flex-direction: row;
+       
+        padding: 13px;
+ }
+   
 }
 .lien{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

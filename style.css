@@ -628,14 +628,14 @@ ul li li::before {
 
 .sidebar__footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
 }
-
-.footer__col {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+@media screen and (min-width: 800px) {
+  .sidebar__footer {
+    flex-direction: row;
+    padding: 13px;
+  }
 }
 
 .lien {
@@ -737,14 +737,14 @@ ul li li::before {
   }
 }
 
-.menu-evenement-container {
+.menu-evenement-container .menu-bloc-archive-container {
   background-color: transparent;
 }
-.menu-evenement-container .menu {
+.menu-evenement-container .menu-bloc-archive-container .menu {
   display: flex;
   justify-content: space-between;
 }
-.menu-evenement-container .menu .menu-item {
+.menu-evenement-container .menu-bloc-archive-container .menu .menu-item {
   background-color: cornflowerblue;
   display: flex;
   flex-direction: column;
@@ -756,18 +756,28 @@ ul li li::before {
   margin-left: 14em;
   text-align: center;
 }
-.menu-evenement-container .menu a {
+.menu-evenement-container .menu-bloc-archive-container .menu a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 30px;
 }
-.menu-evenement-container .menu a .title {
+.menu-evenement-container .menu-bloc-archive-container .menu a .title {
   font-size: 1.5rem;
 }
-.menu-evenement-container .menu a .description {
+.menu-evenement-container .menu-bloc-archive-container .menu a .description {
   font-size: 1rem;
+}
+
+.img__archive {
+  width: 300px;
+  height: 150px;
+  background-size: cover;
+}
+
+.archive__cours .img__archive {
+  background-image: url(https://media.gcflearnfree.org/content/5e31ca08bc7eff08e4063776_01_29_2020/ProgrammingIllustration.png);
 }
 
 .article__single h3 {
