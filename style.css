@@ -413,14 +413,14 @@ ol {
 }
 @media screen and (min-width: 400px) {
   ul,
-  ol {
+ol {
     margin: 1rem 0.5rem;
     padding: 0 13px;
   }
 }
 @media screen and (min-width: 700px) {
   ul,
-  ol {
+ol {
     margin: 1rem 0.5rem;
     padding: 0 15px;
   }
@@ -773,6 +773,7 @@ ul li li::before {
 .article__single h3 {
   display: flex;
   align-items: center;
+  background-color: blanchedalmond;
 }
 .article__single h3 img {
   margin: 5px;
