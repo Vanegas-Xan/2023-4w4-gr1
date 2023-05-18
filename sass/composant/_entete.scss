@@ -5,6 +5,7 @@
     background-color: rgb(70, 62, 62);
     width: 100%;
     overflow-x: hidden;
+    height: 30%;
    
     @media screen and (max-width : $largeur__mobile) {
         flex-direction: row;

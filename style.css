@@ -471,6 +471,7 @@ pre {
   background-color: rgb(70, 62, 62);
   width: 100%;
   overflow-x: hidden;
+  height: 30%;
 }
 @media screen and (max-width: 700px) {
   .entete__nav {
@@ -637,12 +638,12 @@ ul li li::before {
   margin-top: 20px;
   margin-left: 87px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .sidebar__footer {
     flex-direction: column;
     margin-top: 25px;
     margin-left: 72px;
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -772,9 +773,9 @@ ul li li::before {
   .menu-evenement-container .menu,
 .menu-bloc-archive-container .menu {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 25px;
-    margin-left: 72px;
+    margin-left: 36px;
     width: 90%;
   }
 }
@@ -785,10 +786,10 @@ ul li li::before {
   flex-direction: column;
   border-radius: 2px 2px 2px 2px;
   content: none;
-  margin-left: 8em;
-  height: 100px;
+  height: 200px;
   margin: 10px;
-  margin-left: 14em;
+  margin-right: 10em;
+  margin-left: 10em;
   text-align: center;
 }
 @media screen and (max-width: 700px) {
@@ -797,8 +798,8 @@ ul li li::before {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
-    height: 20em;
+    justify-content: space-around;
+    height: 9em;
   }
 }
 .menu-evenement-container .menu a,
@@ -807,7 +808,7 @@ ul li li::before {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  margin-top: 20px;
 }
 .menu-evenement-container .menu a .title,
 .menu-bloc-archive-container .menu a .title {
@@ -824,12 +825,18 @@ ul li li::before {
   width: 300px;
   height: 150px;
   background-size: cover;
+  transition: 1s;
+}
+.img__archive .img__archive:hover {
+  transform: scale(20deg);
+  color: rgb(240, 246, 208);
 }
 
 .archive__cours .img__archive {
   background-image: url(https://s2.svgbox.net/hero-outline.svg?ic=briefcase);
   width: 100px;
   height: 100px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 700px) {
   .archive__cours .img__archive {
@@ -837,7 +844,8 @@ ul li li::before {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    height: 20em;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -845,6 +853,7 @@ ul li li::before {
   background-image: url(https://s2.svgbox.net/hero-outline.svg?ic=archive);
   width: 100px;
   height: 100px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 700px) {
   .archive__4w4 .img__archive {
@@ -852,7 +861,58 @@ ul li li::before {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    height: 20em;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.evenement__porte .img__archive {
+  background-image: url(https://s2.svgbox.net/hero-outline.svg?ic=users);
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 700px) {
+  .evenement__porte .img__archive {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.evenement__stage .img__archive {
+  background-image: url(https://s2.svgbox.net/hero-outline.svg?ic=identification);
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 700px) {
+  .evenement__stage .img__archive {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50px;
+    height: 50px;
+  }
+}
+.evenement__stage .img__archive .evenement__arcade .img__archive {
+  background-image: url(https://s2.svgbox.net/hero-outline.svg?ic=desktop-computer);
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 700px) {
+  .evenement__stage .img__archive .evenement__arcade .img__archive {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -883,6 +943,12 @@ body {
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
   background-color: rgb(255, 188, 111);
 }
+.site__main .img__templates {
+  padding: 15px;
+}
+.site__main .text__templates {
+  padding: 15px;
+}
 .site__main article {
   padding: 15px;
 }
@@ -890,7 +956,6 @@ body {
   padding: 10px;
 }
 .site__main p {
-  padding: 12px;
   margin-right: 7px;
 }
 .site__main .img__stage {

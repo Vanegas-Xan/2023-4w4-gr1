@@ -12,6 +12,13 @@
     overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
     //padding: 1rem clamp(1rem, 3vw, 20rem);
     background-color: rgb(255, 188, 111);
+    .img__templates{
+        padding: 15px;
+    }
+    .text__templates
+    {
+        padding: 15px;
+    }
 
     article{
         padding: 15px;
@@ -22,7 +29,7 @@
     }
 
     p{
-        padding: 12px;
+        
         margin-right: 7px;
     }
 
