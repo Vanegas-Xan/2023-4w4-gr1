@@ -413,14 +413,14 @@ ol {
 }
 @media screen and (min-width: 400px) {
   ul,
-ol {
+  ol {
     margin: 1rem 0.5rem;
     padding: 0 13px;
   }
 }
 @media screen and (min-width: 700px) {
   ul,
-ol {
+  ol {
     margin: 1rem 0.5rem;
     padding: 0 15px;
   }
@@ -772,6 +772,16 @@ ul li li::before {
   margin-left: 14em;
   text-align: center;
 }
+@media screen and (max-width: 700px) {
+  .menu-evenement-container .menu .menu-item,
+  .menu-bloc-archive-container .menu .menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: 20em;
+  }
+}
 .menu-evenement-container .menu a,
 .menu-bloc-archive-container .menu a {
   display: flex;
@@ -796,7 +806,26 @@ ul li li::before {
 }
 
 .archive__cours .img__archive {
-  background-image: url(https://media.gcflearnfree.org/content/5e31ca08bc7eff08e4063776_01_29_2020/ProgrammingIllustration.png);
+  background-image: url(http://www.w3.org/2000/svg);
+}
+@media screen and (max-width: 700px) {
+  .archive__cours .img__archive {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: 20em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .archive__4w4 .img__archive {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: 20em;
+  }
 }
 
 .article__single h3 {
