@@ -17,6 +17,13 @@
             margin-left: 14em;
             
             text-align: center;
+            @media screen and (max-width : $largeur__mobile) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                height: 20em;
+            }
         
         }
 
@@ -43,9 +50,23 @@
 }
 
 .archive__cours .img__archive{
-        background-image: url(https://media.gcflearnfree.org/content/5e31ca08bc7eff08e4063776_01_29_2020/ProgrammingIllustration.png);
+        background-image: url(http://www.w3.org/2000/svg);
+        @media screen and (max-width : $largeur__mobile) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            height: 20em;
+        }
 }
 
 .archive__4w4 .img__archive{
+    @media screen and (max-width : $largeur__mobile) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        height: 20em;
+    }
     
 }
