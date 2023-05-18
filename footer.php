@@ -1,3 +1,4 @@
+
 <footer class="site__footer">
   <section class="sidebar__footer">
 <section class="footer__col">
@@ -16,7 +17,7 @@
     </div>
 </section>
 </section>
-    <h3>le pied de page</h3>
+   
 
     <?php wp_nav_menu(array (
                    "menu" =>  "footer",    

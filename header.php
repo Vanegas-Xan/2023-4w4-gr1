@@ -34,6 +34,7 @@ if (is_front_page()){
         </section>
         <a class = "site__titre" href="<?= bloginfo('url') ?>"><h3><h1><?= bloginfo('name') ?></h1></a>
         <h2 class="site__description"><?= bloginfo('description') ?></h2>
+        
     </header >
 
 <?php 
