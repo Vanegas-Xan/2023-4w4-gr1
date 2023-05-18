@@ -13,6 +13,11 @@
                    "menu" =>  "evenement",    
                    "container" =>  "nav"
      )); ?>
+
+<?php wp_nav_menu(array (
+                   "menu" =>  "bloc-archive",    
+                   "container" =>  "nav"
+     )); ?>
         <section class="blocflex">
         
             <?php if(have_posts()):
