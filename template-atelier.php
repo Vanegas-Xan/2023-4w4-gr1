@@ -10,11 +10,9 @@
 ?> 
 
 <?php get_header(); ?>
+
 <main class="site__main">
-<?php 
-if(is_page_template()) 
-    get_template_part("template-parts/aside-atelier");
-    ?>
+
 <?php
 if ( have_posts() ) : the_post(); ?>
 <?php the_post_thumbnail('thumbnail'); ?>

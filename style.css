@@ -986,6 +986,10 @@ body {
 .site__main .img__stage {
   padding: 10px;
 }
+.site__main table {
+  background-color: bisque;
+  padding: 15px;
+}
 
 .site__footer {
   grid-area: footer;
@@ -1005,11 +1009,15 @@ body {
 }
 
 .site__aside__atelier {
-  grid-area: aside;
+  grid-area: aside-atelier;
   background-color: rgb(52, 13, 13);
 }
 .site__aside__atelier h3 {
   color: aliceblue;
+}
+.site__aside__atelier .menu-thumbnail {
+  height: 150px;
+  width: 150px;
 }
 
 .site {
@@ -1017,7 +1025,7 @@ body {
   display: grid;
   gap: 20px;
   grid-template-columns: auto;
-  grid-template-areas: "header" "aside" "main" "footer";
+  grid-template-areas: "header" "aside" "aside-atelier" "main" "footer";
 }
 @media screen and (min-width: 1000px) {
   .site {
