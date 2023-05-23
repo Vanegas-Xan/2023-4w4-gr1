@@ -1,4 +1,5 @@
 .menu-evenement-container,
+.menu-atelier-container,
 .menu-bloc-archive-container{//nav
     background-color: transparent;
     .menu{ //ul
@@ -46,6 +47,19 @@
             }
             .description{
                 font-size: 1rem;
+            }
+
+            .menu-thumbnail{
+                height: 150px;
+                width: 180px;
+                @media screen and (max-width : $largeur__mobile) {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-end;
+                    width: 70px;
+                height:  70px;
+                }
             }
         }
     }
@@ -121,6 +135,7 @@
         width: 50px;
     height:  50px;
     }
+ 
 
     .evenement__arcade  .img__archive{
         background-image: url(https://s2.svgbox.net/hero-outline.svg?ic=desktop-computer);

@@ -57,6 +57,15 @@
    }
 }
 
+.site__aside__atelier{
+    grid-area: aside;
+    background-color: rgb(52, 13, 13);
+
+   h3{
+        color: aliceblue;
+   }
+}
+
 .site{
     box-sizing: border-box;
     display: grid;

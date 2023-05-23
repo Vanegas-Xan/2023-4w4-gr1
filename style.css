@@ -766,11 +766,13 @@ ul li li::before {
 }
 
 .menu-evenement-container,
+.menu-atelier-container,
 .menu-bloc-archive-container {
   background-color: transparent;
 }
 @media screen and (max-width: 700px) {
   .menu-evenement-container .menu,
+.menu-atelier-container .menu,
 .menu-bloc-archive-container .menu {
     display: flex;
     flex-direction: column;
@@ -780,6 +782,7 @@ ul li li::before {
   }
 }
 .menu-evenement-container .menu .menu-item,
+.menu-atelier-container .menu .menu-item,
 .menu-bloc-archive-container .menu .menu-item {
   background-color: cornflowerblue;
   display: flex;
@@ -794,6 +797,7 @@ ul li li::before {
 }
 @media screen and (max-width: 700px) {
   .menu-evenement-container .menu .menu-item,
+.menu-atelier-container .menu .menu-item,
 .menu-bloc-archive-container .menu .menu-item {
     display: flex;
     flex-direction: row;
@@ -803,6 +807,7 @@ ul li li::before {
   }
 }
 .menu-evenement-container .menu a,
+.menu-atelier-container .menu a,
 .menu-bloc-archive-container .menu a {
   display: flex;
   flex-direction: column;
@@ -811,12 +816,32 @@ ul li li::before {
   margin-top: 20px;
 }
 .menu-evenement-container .menu a .title,
+.menu-atelier-container .menu a .title,
 .menu-bloc-archive-container .menu a .title {
   font-size: 1.5rem;
 }
 .menu-evenement-container .menu a .description,
+.menu-atelier-container .menu a .description,
 .menu-bloc-archive-container .menu a .description {
   font-size: 1rem;
+}
+.menu-evenement-container .menu a .menu-thumbnail,
+.menu-atelier-container .menu a .menu-thumbnail,
+.menu-bloc-archive-container .menu a .menu-thumbnail {
+  height: 150px;
+  width: 180px;
+}
+@media screen and (max-width: 700px) {
+  .menu-evenement-container .menu a .menu-thumbnail,
+.menu-atelier-container .menu a .menu-thumbnail,
+.menu-bloc-archive-container .menu a .menu-thumbnail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 70px;
+    height: 70px;
+  }
 }
 
 .img__archive {
@@ -976,6 +1001,14 @@ body {
   background-color: rgb(52, 13, 13);
 }
 .site__aside h3 {
+  color: aliceblue;
+}
+
+.site__aside__atelier {
+  grid-area: aside;
+  background-color: rgb(52, 13, 13);
+}
+.site__aside__atelier h3 {
   color: aliceblue;
 }
 

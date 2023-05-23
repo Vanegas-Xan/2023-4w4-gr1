@@ -8,13 +8,16 @@
 </head>
 <?php wp_head(); ?>
 <?php
+
+
 $nouvel_class = "";
-if (is_front_page()){
-    $nouvel_class = "no-aside";
-}
 if (is_page_template('template-atelier.php')) {
     $nouvel_class = '';
 }
+if  (is_front_page() || 
+   (! in_category("cours") && ! in_category("4w4")) ){
+     $nouvel_class = 'no-aside';
+   }
 
 
 ?>
@@ -44,6 +47,7 @@ if (is_page_template('template-atelier.php')) {
 <?php 
 if(! is_front_page()) 
     get_template_part("template-parts/aside");
+ 
     ?>
 
 </html>
