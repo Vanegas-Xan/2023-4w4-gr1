@@ -787,7 +787,7 @@ ul li li::before {
   background-color: cornflowerblue;
   display: flex;
   flex-direction: column;
-  border-radius: 2px 2px 2px 2px;
+  border-radius: 20px 20px 20px 20px;
   content: none;
   height: 200px;
   margin: 10px;
@@ -981,6 +981,7 @@ body {
   padding: 10px;
 }
 .site__main p {
+  padding: 15px;
   margin-right: 7px;
 }
 .site__main .img__stage {
@@ -989,6 +990,16 @@ body {
 .site__main table {
   background-color: bisque;
   padding: 15px;
+  margin-left: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+.site__main td {
+  color: rgb(19, 24, 22);
+  border: 1px red solid;
+  padding: 5px;
+  gap: 5px;
 }
 
 .site__footer {
@@ -1006,18 +1017,6 @@ body {
 }
 .site__aside h3 {
   color: aliceblue;
-}
-
-.site__aside__atelier {
-  grid-area: aside-atelier;
-  background-color: rgb(52, 13, 13);
-}
-.site__aside__atelier h3 {
-  color: aliceblue;
-}
-.site__aside__atelier .menu-thumbnail {
-  height: 150px;
-  width: 150px;
 }
 
 .site {
