@@ -12,6 +12,10 @@ $nouvel_class = "";
 if (is_front_page()){
     $nouvel_class = "no-aside";
 }
+if (is_page_template('template-atelier.php')) {
+    $nouvel_class = '';
+}
+
 
 ?>
 

@@ -8,6 +8,12 @@
     <main class="site__main">
         <pre>Front-page.php</pre>
         <h1 class="titre__bienvenue">Bienvenue sur 4W4</h1>
+        <h2> Les atelier disponibles</h2>
+
+        <?php wp_nav_menu(array (
+                   "menu" =>  "atelier",    
+                   "container" =>  "nav"
+     )); ?>
         <h2> Les Évenements à venir</h2>
         <?php wp_nav_menu(array (
                    "menu" =>  "evenement",    
